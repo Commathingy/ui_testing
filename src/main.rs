@@ -1,6 +1,6 @@
 use bevy::prelude::*;
 use bevy_lunex::prelude::*;
-use components::ComponentPlugin;
+use components::{ComponentPlugin, SkillButtonUi};
 use routes::{RoutePlugin, SkillTreeRoute};
 
 
@@ -41,6 +41,7 @@ fn spawn_camera(
 ){
     commands.spawn((
         MainUi,
+        SkillButtonUi,
         Camera2dBundle::default()
     )).with_children(|cam|{
         cam.spawn((

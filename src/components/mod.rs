@@ -1,7 +1,7 @@
 use bevy::{app::{Plugin, Update}, prelude::{IntoSystemConfigs, SystemSet}};
 use bevy_lunex::{UiDebugPlugin, UiGenericPlugin, UiSystems};
-use skill_button::{build_skill_button, SkillButtonUi};
-pub use skill_button::SkillButton;
+use skill_button::build_skill_button;
+pub use skill_button::{SkillButton, SkillButtonUi};
 
 mod skill_button;
 

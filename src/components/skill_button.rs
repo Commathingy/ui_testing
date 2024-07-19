@@ -1,7 +1,6 @@
 use bevy::prelude::*;
 use bevy_lunex::prelude::*;
 
-
 #[derive(Component)]
 pub struct SkillButton {
     // Any fields we want to interact with should be here.
@@ -39,8 +38,9 @@ pub fn build_skill_button(
                 UiText2dBundle {
                     text: Text::from_section(&button.text,
                         TextStyle {
+                            font: asset_server.load("font.ttf"),
                             font_size: 60.0, // By default hardcoded as Relative height (Rh) - so 60% of the node height
-                            color: Color::BLACK,
+                            color: Color::linear_rgba(1.0, 0.0, 0.0, 1.0),
                             ..Default::default()
                         }),
                     ..default()
